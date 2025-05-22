@@ -1,7 +1,29 @@
-class Base {
-  name: string = 'Hari';
+type Constructor<T = {}> = new (...args: any[]) => T;
+
+function Swimmer<T extends Constructor>(Base: T) {
+  return class extends Base {
+    swim() {
+      console.log('Swimming...');
+    }
+  };
 }
 
-const person = new Base();
+function Walker<T extends Constructor>(Base: T) {
+  return class extends Base {
+    walk() {
+      console.log('Walking...');
+    }
+  };
+}
 
-console.log(person.name);
+class Base {
+  name: string = 'Pranav';
+}
+
+class Child extends Swimmer(Walker(Base)) {}
+
+const child = new Child();
+
+child.swim();
+child.walk();
+console.log(child.name);

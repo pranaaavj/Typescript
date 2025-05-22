@@ -5,7 +5,8 @@
     "module": "CommonJS",
     "strict": true,
     "esModuleInterop": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "experimentalDecorators": true
   },
   "include": ["./**/*.ts"]
 }
