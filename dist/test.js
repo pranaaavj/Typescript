@@ -1,7 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const user = {
-    name: 'Pranav',
-    id: 12,
+const findSum = function (name) {
+    console.log(name);
 };
-console.log(user);
+findSum('Pranav');

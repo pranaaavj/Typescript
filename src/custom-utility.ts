@@ -4,7 +4,11 @@ type User = {
 };
 
 type MyPartial<T> = {
-  [K in keyof T]: T[K];
+  [K in keyof T]?: T[K];
 };
+
+const user: MyPartial<User> = {
+  name: 'Pranav'
+}
 
 export { User };

@@ -1,4 +1,4 @@
-type Constructor<T = {}> = new (...args: any[]) => T;
+type Constructor = new (...args: any[]) => {};
 
 function Swimmer<T extends Constructor>(Base: T) {
   return class extends Base {
